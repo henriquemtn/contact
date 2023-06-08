@@ -2,141 +2,170 @@
 <html>
 <head>
 	<title>Entre em Contato</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 
-    <style>
+	<style>
 
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Quicksand', sans-serif;
-}
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: 'Quicksand', sans-serif;
+		}
+		
+		body{
+			height: 100vh;
+			width: 100%;
+			background-color: #d8d8d8;
+		}
+		
+		.container{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px 100px;
+		}
+		
+		.container:after{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: url("img/bg.jpg") no-repeat center;
+			background-size: cover;
+			filter: blur(50px);
+			z-index: -1;
+		}
+		.contact-box{
+			border-radius: 5px;
+			height: 550px;
+			max-width: 500px;
+			display: grid;	
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			background-color: #fff;
+			box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+		}
 
-body{
-	height: 100vh;
-	width: 100%;
-    background-color: #d8d8d8;
-}
-
-.container{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px 100px;
-}
-
-.container:after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: url("img/bg.jpg") no-repeat center;
-	background-size: cover;
-	filter: blur(50px);
-	z-index: -1;
-}
-.contact-box{
-	max-width: 500px;
-	display: grid;	
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background-color: #fff;
-	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
-}
-
-.left{
-	background: url("img/bg.jpg") no-repeat center;
-	background-size: cover;
-	height: 100%;
-}
-
-.right{
-	padding: 25px 40px;
-}
-
-h2{
-	position: relative;
-	padding: 0 0 10px;
-	margin-bottom: 10px;
-}
-
-h2:after{
-	content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: #009788;
-}
-
-.field{
-	width: 100%;
-	border: 2px solid rgba(0, 0, 0, 0);
-	outline: none;
-	background-color: rgba(230, 230, 230, 0.6);
-	padding: 0.5rem 1rem;
-	font-size: 1.1rem;
-	margin-bottom: 22px;
-	transition: .3s;
-}
-
-.field:hover{
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-textarea{
-	min-height: 150px;
-}
-
-.btn{
-	width: 100%;
-	padding: 0.5rem 1rem;
-	background-color: #009788;
-	color: #fff;
-	font-size: 1.1rem;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	transition: .3s;
-}
-
-.btn:hover{
-    background-color: #009788;
-}
-
-.field:focus{
-    border: 2px solid rgba(0,151,136,0.47);
-    background-color: #fff;
-}
-    </style>
-
-</head>
-<body>
-	<div class="container">
-		<div class="contact-box">
-			<div class="left"></div>
-			<div class="right">
-				<h2>Entre em Contato</h2>
-				<input type="text" class="field" placeholder="Nome">
-                <input type="text" class="field" placeholder="Sobrenome">
-				<input type="text" class="field" placeholder="Email">
-				<input type="text" class="field" placeholder="Telefone">
-				<textarea placeholder="Mensagem" class="field"></textarea>
-				<button class="btn">Enviar</button>
+		
+		h2{
+			position: relative;
+			padding: 0 0 10px;
+			margin-bottom: 10px;
+			
+		}
+		
+		h2:after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			height: 4px;
+			width: 50px;
+			border-radius: 2px;
+			background-color: #009788;
+		}
+		
+		.field{
+			width: 100%;
+			border: 2px solid rgba(0, 0, 0, 0);
+			outline: none;
+			background-color: rgba(230, 230, 230, 0.6);
+			padding: 0.5rem 1rem;
+			font-size: 1.1rem;
+			margin-bottom: 22px;
+			transition: .3s;
+		}
+		
+		.field:hover{
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+		
+		textarea{
+			min-height: 150px;
+		}
+		
+		.btn{
+			align-items: center;
+			width: 500px;
+			height: 70px;
+			border-radius: 3px;
+			padding: 0.5rem 1rem;
+			background-color: #009788;
+			color: #fff;
+			font-size: 1.1rem;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			transition: .3s;
+		}
+		
+		.btn:hover{
+			background-color: #009788;
+		}
+		
+		.field:focus{
+			border: 2px solid rgba(0,151,136,0.47);
+			background-color: #fff;
+		}
+			</style>
+		
+		</head>
+		<body>
+			<div class="container">
+				<div class="contact-box">
+					<div class="form"></div>
+					<form onsubmit="sendEmail(); return false;">
+						<h2>Entre em Contato</h2>
+						<input type="text" id="nome" class="field" placeholder="Nome">
+						<input type="text" id="sobrenome" class="field" placeholder="Sobrenome">
+						<input type="text" id="email" class="field" placeholder="Email">
+						<input type="text" id="phone"class="field" placeholder="Telefone">
+						<textarea placeholder="Mensagem" id="mensagem" class="field"></textarea>
+						<button class="btn" type="submit">Enviar</button>
+					</form>
+				</div>
 			</div>
-		</div>
-	</div>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init("TNApDMrE2qoM2Gk_0");
+		})();
+
+		function sendEmail(){
+			var params = {
+				name: document.getElementById("nome").value,
+				email: document.getElementById("email").value,
+				message: document.getElementById("mensagem").value,
+				url: window.location.href
+			};
+
+			emailjs.send("service_vfpzycd","template_r8hi3y5", params)
+				.then(function(response) {
+					console.log("E-mail enviado com sucesso!", response);
+					alert("Mensagem enviada com sucesso!");
+					resetForm();
+				}, function(error) {
+					console.error("Erro ao enviar o e-mail!", error);
+					alert("Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.");
+				});
+		}
+
+		function resetForm() {
+			document.getElementById("nome").value = "";
+			document.getElementById("email").value = "";
+			document.getElementById("mensagem").value = "";
+		}
+	</script>
+
 </body>
 </html>
